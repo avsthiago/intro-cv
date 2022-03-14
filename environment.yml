@@ -1,0 +1,5 @@
+name: introcv
+channels:
+  - defaults
+dependencies:
+  - jupyter=1.0
