@@ -38,7 +38,6 @@ while cap.isOpened():
         # Press Q on keyboard to  exit
         if cv2.waitKey(25) & 0xFF == ord('q'):
             break
-
     else:
         break
 
