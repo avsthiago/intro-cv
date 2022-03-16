@@ -1,13 +1,8 @@
-# [ 87 102 166] [179 255 255]
-
-#
 import cv2
 import numpy as np
 
 window_name = "HSV"
 cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
-
-# image = cv2.imread("resources/frame_red.png")
 cap = cv2.VideoCapture('resources/color_detection.mov')
 
 
@@ -49,16 +44,3 @@ while cap.isOpened():
 
 cap.release()
 cv2.destroyAllWindows()
-
-#
-# cv2.imshow("contours", mask_bgr)
-# cv2.imshow("original", image)
-# cv2.imshow(window_name, mask)
-#
-# cv2.waitKey(0)
-
-# ==================================================================
-
-
-# When everything done, release the video capture object
-
