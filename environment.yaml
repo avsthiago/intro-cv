@@ -1,0 +1,14 @@
+name: introcv
+channels:
+  - defaults
+dependencies:
+  - ipykernel=6.9
+  - jupyter=1.0
+  - matplotlib=3.5
+  - numpy=1.21
+  - pip=21.2
+  - python=3.7
+  - pip:
+    - black==22.1
+    - click==8.0
+    - opencv-python==4.5.5
