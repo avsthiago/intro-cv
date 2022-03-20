@@ -3,3 +3,5 @@
 .DS_Store
 resources/color_detection.mov
 resources/frame_red.png
+*.mov
+*.avi
