@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-cap = cv2.VideoCapture('resources/color_detection.mov')
+cap = cv2.VideoCapture("resources/color_detection.mov")
 
 
 def get_biggest_countour(mask):
@@ -32,10 +32,10 @@ while cap.isOpened():
     if ret:
         # Display the resulting frame
         frame = detect_object(frame)
-        cv2.imshow('Frame', frame)
+        cv2.imshow("Frame", frame)
 
         # Press Q on keyboard to  exit
-        if cv2.waitKey(25) & 0xFF == ord('q'):
+        if cv2.waitKey(25) & 0xFF == ord("q"):
             break
     else:
         break
