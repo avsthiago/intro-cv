@@ -1,17 +1,16 @@
 import cv2
 import numpy as np
 
-window_name = "HSV"
-cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
 cap = cv2.VideoCapture('resources/color_detection.mov')
 
 
 def get_biggest_countour(mask):
     contours_found = cv2.findContours(mask, cv2.RETR_LIST, cv2.CHAIN_APPROX_SIMPLE)
-    contours = contours_found[1]
-    contour_sizes = [(cv2.contourArea(contour), contour) for contour in contours]
-    if contour_sizes:
-        return max(contour_sizes, key=lambda x: x[0])[1]
+    contours = contours_found[0]
+    if contours is not None:
+        contour_sizes = [(cv2.contourArea(contour), contour) for contour in contours]
+        if contour_sizes:
+            return max(contour_sizes, key=lambda x: x[0])[1]
     return None
 
 
